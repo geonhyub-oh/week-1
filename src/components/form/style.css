@@ -7,6 +7,8 @@
    
     background-color: whitesmoke;  
     margin: auto;
+    border-radius: 18px;
+    padding: 0 15px;
   }
 .input-title{
     margin: auto;
@@ -20,6 +22,7 @@
      color:black;
      line-height: 50px;
      border-radius: 12px;
+    
      }
 
      .input-comment{

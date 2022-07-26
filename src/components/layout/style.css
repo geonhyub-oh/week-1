@@ -2,6 +2,7 @@
     margin: 0 auto;
     max-width: 1200px;
     min-width: 800px;
+   
 }
 
 .layout-wrapper{
@@ -35,8 +36,11 @@
 .working{
     margin-top: 50px;
 }
+.oh{
+    display: flex;
+    gap: 12px;
+}
 .todo-container{
-    
         border: 4px solid teal;
         border-radius: 12px;
         padding: 12px 24px 24px;

@@ -10,7 +10,7 @@ function App() {
   <div  className="app-container" id="app"  >
   <Header/>  
   <Form/>
-  <Layout/>
+  {/* <Layout/> */}
   <List/>
   </div>
 )}
