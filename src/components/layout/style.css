@@ -1,0 +1,68 @@
+.layout-container{
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 800px;
+}
+
+.layout-wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    
+}
+.btn1-container{
+    border-radius: 8px;
+    cursor: pointer;
+    height: 50px;
+    width: 130px;
+    background-color: #fff;
+    border: 2px solid red;
+     
+}
+.btn2-container{
+    
+    border-radius: 8px;
+    cursor: pointer;
+    height: 50px;
+    width: 130px;
+    background-color: #fff;
+    border: 2px solid green;
+    
+}
+.working{
+    margin-top: 50px;
+}
+.todo-container{
+    
+        border: 4px solid teal;
+        border-radius: 12px;
+        padding: 12px 24px 24px;
+        width: 270px;
+        height: 150px;
+}
+.working{
+    
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    
+}
+.btnset {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+.todomap{
+    border: 4px solid teal;
+    border-radius: 12px;
+    padding: 12px 24px 24px;
+    width: 270px;
+    height: 150px;
+}
