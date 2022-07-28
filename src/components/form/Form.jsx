@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../layout/Layout';
+import List from '../list/List';
 import "./style.css";
 
 
@@ -7,18 +8,34 @@ function  Form() {
   const [title, setTitle] = useState("");
   const [comment, setComment] = useState("");
   const [done, setDone] = useState(false)
-  const [todos, setTodos] = useState([
+  const [todolist, setTodolist] = useState([
+    {
+      id: 0,
+      title: "리액트 공부를 하자",
+      comment:"리액트 기초 공부를 합니다",
+      done: false
+    },
+    
+  ])
+  const [donelist, setDonelist] = useState([
     {
       id: 1,
-      title: "건협이 소유권",
-      comment:"김지은",
-      done,
+      title: "리액트 공부를 하자",
+      comment: "리액트 기초 공부를 합니다",
+      done:true
     },
-  ])
+  ]);
 
-  const onRemove = id => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  }
+  
+
+  const tonRemove = id => {
+    setTodolist(todolist.filter(todos => todos.id !== id));}
+  
+    const doneRemove = id => {
+    setDonelist(donelist.filter(dones => dones.id !== id));}
+  
+
+ 
 
    return(
      <>
@@ -31,21 +48,18 @@ function  Form() {
           ;
         }} ></input>
       <button  className="btn-add" id="btnadd" onClick={() => {
-          setTodos([...todos, { id: todos.length + 1, title: title ,comment: comment}])
+          setTodolist([...todolist, { id: todolist.length + 1, title: title ,comment: comment,done:false }])
           setTitle("")
           setComment("");
         }} >추가하기</button>
-        
-        {/* <div className="todos-container" >
-        {todos.map((todo) => (
-        <div className="todo" key={todo.id}>
-        {todo.title}{todo.comment}
-        </div>
-          ))}
-        </div> */}
+   
     </div>
-    <Layout setDone={setDone} done={done} todos={todos} setTodos={setTodos} onRemove={onRemove}/>
+    <Layout setDone={setDone} done={done} todolist={todolist} setTodolist={setTodolist} tonRemove={tonRemove} 
+    setDonelist={setDonelist} donelist={donelist} doneRemove={doneRemove}/>
     
+    <List setDone={setDone} done={done} todolist={todolist} setTodolist={setTodolist} tonRemove={tonRemove}
+   setDonelist={setDonelist} donelist={donelist} doneRemove={doneRemove}
+    />
     </>
   )
   }

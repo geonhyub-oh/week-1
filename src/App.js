@@ -11,7 +11,7 @@ function App() {
   <Header/>  
   <Form/>
   {/* <Layout/> */}
-  <List/>
+  {/* <List/> */}
   </div>
 )}
 
